@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<head>
+		<meta charset="UTF-8">
+		<title>Crystal Collector!</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Sigmar+One' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	</head>
+</head>
+<body>
+<h1>Crystal Collector!</h1>
+	<div class="container">
+		<center>
+			<p>You wil be given a random number at the start of the game. There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total score. You win the game by matching your total score to random number, you lose the ame if your total core goes above th random number The value of each crytal is hidden from you until you click on it. Each time when the game starts, the game will change the values of each crystal. </p>
+		<div id="crystals"></div>
+		<div id="wrapper">
+			<p id="random">Current Random Numnber:</p>
+			<p><span id="number"></span></p>
+			<p id="score">Your Number:</p>
+			<p><span id="yourNumber"></span></p>
+		</div>
+		<div id="scoreboard">
+			<p id="wins">Games Won:</p>
+			<p id="lost">Games Lost:</p>
+		</div>
+		</center>
+	</div>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+<script type="text/javascript">
+  $( document ).ready(function() {
+    var numberToGuess = Math.floor(Math.random() * 102) + 19;
+    var counter = 0;
+    var wins = 0;
+    var lost = 0;
+    var random = Math.floor(Math.random() * 12) + 1;
+	var random1 = Math.floor(Math.random() * 12) + 1;
+	var random2 = Math.floor(Math.random() * 12) + 1;
+	var random3 =Math.floor(Math.random() * 12) + 1;
+	var numbers = [random, random1, random2, random3];
+
+
+    $('#number').text(numberToGuess);
+
+
+   for (var i=0; i< numbers.length; i++){
+      var imageCrystal = $('<img>');
+      
+      imageCrystal.attr('data-num', numbers[i]);
+      imageCrystal.attr('src', "assets/css/images/crystal" + (i + 1) + ".png");      
+      imageCrystal.attr('width', '100');
+      imageCrystal.attr('alt', 'crystals');
+      imageCrystal.addClass('crystalImage');
+      $('#crystals').append(imageCrystal);
+    }
+    
+    $('.crystalImage').on('click', function(){
+      counter = counter + parseInt($(this).data('num'));
+      
+      $('#yourNumber').text(counter);
+      if (counter == numberToGuess){
+      	alert("You win!");
+        wins++;
+         document.querySelector('#wins').innerHTML = "Games Won: " + wins;
+       reset();
+
+      }else if( counter > numberToGuess){
+      	alert("You lose!");
+        lost++;
+         document.querySelector('#lost').innerHTML = "Games Lost: " + lost;
+         reset();
+      }
+
+    });
+   
+  });
+function reset() {
+
+	counter=0;
+	numberToGuess = Math.floor(Math.random() * 102) + 19;
+	$('#number').text(numberToGuess);
+
+	$('#crystalImg').each(function(index) {
+
+	$('#imageCrystal').attr('data-num', numbers[i]);
+
+	});
+}
+
+</script>
+</body>
+</html>

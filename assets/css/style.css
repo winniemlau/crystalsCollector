@@ -1,0 +1,62 @@
+html {
+	height: 100%;
+}
+
+body {
+	background: url("../css/images/bluebg.jpg");
+    background-repeat: repeat-x  repeat-y;
+	font-size: 14px;
+	line-height: 24px;
+    font-family: 'Raleway', sans-serif;    
+}
+
+.container {
+	width: 800px;
+	float: left;
+	overflow: hidden;
+	position: relative;
+	margin: 40px 60px 0px 200px;
+	padding: 40px;
+	/* set border styling */
+    border-color: #fafaec;
+    border-style: solid;
+    border-width: 5px;
+
+    /* set border roundness */
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+}
+
+.display {
+	float: right;
+	overflow: hidden;
+	position: relative;
+	margin: -200px 250px 0px 0px;
+	width: 160px;
+}
+
+h1 {
+	font-family: 'Sigmar One', cursive;	font-size: 24pt;
+    font-size: 45pt;
+    font-weight: bold;
+	text-align: center;
+	margin-top: 50px;
+	padding-top: 10px;
+
+}
+#wrapper {
+	float: left;
+	margin: 20px 0px 0px 260px;
+}
+
+#scoreboard {
+	float: right;
+	margin: 20px 260px 0px 0px;
+}
+#random, #scoreboard, #score {
+	font-weight: bold;
+}
+#number, #yourNumber {
+	font-size: 24pt;
+}
