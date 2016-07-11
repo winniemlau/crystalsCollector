@@ -1,62 +1,34 @@
-html {
-	height: 100%;
-}
-
 body {
-	background: url("../css/images/bluebg.jpg");
-    background-repeat: repeat-x  repeat-y;
+	background: url("../css/images/mountains.jpg");
+	background-size: cover;
+  background-repeat: no-repeat;
 	font-size: 14px;
-	line-height: 24px;
-    font-family: 'Raleway', sans-serif;    
-}
-
-.container {
-	width: 800px;
-	float: left;
-	overflow: hidden;
-	position: relative;
-	margin: 40px 60px 0px 200px;
-	padding: 40px;
-	/* set border styling */
-    border-color: #fafaec;
-    border-style: solid;
-    border-width: 5px;
-
-    /* set border roundness */
-    border-radius: 15px;
-    -moz-border-radius: 15px;
-    -webkit-border-radius: 15px;
-}
-
-.display {
-	float: right;
-	overflow: hidden;
-	position: relative;
-	margin: -200px 250px 0px 0px;
-	width: 160px;
-}
-
-h1 {
-	font-family: 'Sigmar One', cursive;	font-size: 24pt;
-    font-size: 45pt;
-    font-weight: bold;
-	text-align: center;
-	margin-top: 50px;
-	padding-top: 10px;
+	font-family: 'Raleway', sans-serif;
 
 }
-#wrapper {
-	float: left;
-	margin: 20px 0px 0px 260px;
+
+h1{
+	  	font-family: 'Montserrat', sans-serif;
 }
 
-#scoreboard {
-	float: right;
-	margin: 20px 260px 0px 0px;
+#blue, #green, #red, #yellow {
+	width: 125px;
 }
-#random, #scoreboard, #score {
-	font-weight: bold;
+
+#leftcol {
+	margin-top: -150px;
 }
-#number, #yourNumber {
-	font-size: 24pt;
+
+.panel-primary > .panel-heading {
+  background-color: #a5bcdb;
+  color: white;
+}
+
+.panel-primary {
+	background-color: #527ab5;
+	color: white;
+}
+
+#rowOne {
+	margin-top: -25px;
 }
