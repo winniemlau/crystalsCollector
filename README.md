@@ -1,6 +1,8 @@
 #Week 4 Assignment
 ##Crystal Collector
 
+![alt tag](https://github.com/winniemlau/crystalscollector/blob/master/assets/css/images/crystalscreenshot.jpg)
+
 ###Objectives
 * Create a fun and interactive game in the browser.
 * Dynamically update the HTML with jQuery.
