@@ -29,4 +29,4 @@
 
 ###Deployed App:
 
-Heroku:
+Heroku: http://collectcrystals.herokuapp.com
